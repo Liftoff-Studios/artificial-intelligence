@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Artificial Intelligence</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <style>
+           body{
+               font-family: 'MuseoModerno', cursive;
+               margin-left:10em;/*Using responsive design*/
+               margin-right:10em;/*Using responsive design*/
+               border:3px black solid;
+           }
+           h1{
+                font-size:50px;
+                
+           }
+           #navbar:hover{
+               cursor:pointer;
+               
+           }
+           .material-icons{
+               position:relative;
+               cursor:pointer;
+               top:5px;
+           }
+           #navSymbol{
+               position:absolute;
+               top:67px;
+               left:161px;
+               padding:5px;
+               padding-left:10px;
+               border-radius:15%;
+               background-color:rgb(28, 27, 28);
+               color:white;
+           }
+           #navbar{
+               position:absolute;
+               top:67px;
+               left:162px;
+               padding:20px;
+               border:2px black solid;
+               display:table;
+               color:rgb(194, 192, 194);
+               background-color:rgb(0, 0, 0);
+           }
+           #drop{
+               position:relative;
+               top:7px;
+               transform:rotate(-90deg);
+           }
+           #ha{
+               position:relative;
+               left:16px;
+           }
+           #navbar>div:not(#ai):hover{
+               color:rgb(255, 255, 255);
+           }
+           #ai>div:not(#ha):hover{
+               color:rgb(255, 255, 255);
+           }
+           .scene{
+               padding-left:70px;
+               padding-right:70px;
+           }
+           footer{
+               padding:30px;
+               padding-bottom:10px;
+               margin-left:70px;
+               margin-right:70px;
+               border:1px black solid;
+               color:rgb(128, 128, 128);
+               background-color:rgb(0, 0, 0);
+           }
+           footer a{
+               color:white;
+           }
+        </style>
+        <style>
+            #startIT{
+                text-align:center;
+            }
+            #slideshow{
+                width:800px;
+                height:500px;
+                border:1px black solid;
+                background-color:rgb(28, 27, 28);
+                color:white;
+            }
+            .pink{
+                color:rgb(255, 0, 255);
+            }
+            .red{
+                color:rgb(255, 0, 0);
+            }
+            .blue{
+                color:rgb(30, 0, 255);
+            }
+            .green{
+                color:rgb(0, 255, 9);
+            }
+        </style>
+        <style>
+            .codeBox{
+                width:800px;
+                height:300px;
+                border:1px black solid;
+                background-color:rgb(48, 45, 48);
+            }
+            .WcodeBox{
+                width:800px;
+                height:200px;
+                border:1px black solid;
+                background-color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <center><h1>Artificial Intelligence</h1></center>
+        <center><tt><h4><span id="movingText"></span></h4></tt></center>
+        <br><br>
+        <b><div class="material-icons" id="navSymbol" onclick="openNavigator()">
+menu
+</div></b><!--Nav Symbol-->
+        <div id= "navbar">
+            <u><b>Menu</b></u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="material-icons" onclick='closeNavigator()'>
+close
+</div><br><br>
+            <div id="home" onclick="changePage(0);">
+                <div class="material-icons">
+home
+</div>Home
+        </div><!--Home-->
+            <div id="about" onclick="changePage(1);">
+            <div class="material-icons">
+help_outline
+</div>
+                About
+        </div><!--About-->
+            <div id="aiDrop" onclick="dropIt()"><div class="material-icons">
+smart_toy
+</div>Artificial Intelligence <div id="drop" class="material-icons">arrow_drop_down</div></div>
+            <div id="ai">
+                <div id="ha">Explore<br></div>
+                <div id="history" onclick="changePage(2);">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-History
+       </div><!--History-->
+                <div id="domains" onclick="changePage(3);">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Domains of A.I
+       </div><!--Domains of A.I-->
+                <div id="advantages" onclick="changePage(4);">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Advantages of A.I
+       </div><!--Advantages of A.I-->
+                <div id="disadvantages" onclick="changePage(5);">
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Disdvantages of A.I
+       </div><!--Disadvantages of A.I-->
+                <div id="application" onclick="changePage(6);">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Application of A.I
+            </div><!--Application of A.I-->
+            </div><!--A.I-->
+            <div id="learnpy" onclick="changePage(7);">
+            <div class="material-icons">
+code
+</div>
+                Basic Python
+            </div><!--Basic Python-->
+            <div id="credits" onclick="changePage(8);">
+            <div class="material-icons">
+contact_page
+</div>
+                Credits
+            </div><!--Credits -->
+       </div><!--Navbar-->
+       
+       <div id="homeSections" class='scene'>
+          <h2>Home</h2><hr>
+          Welcome to this informative webpage made by me about artificial intelligence, or A.I as many people call it. Enjoy the webpage and be sure to check out all the sections !!<br><br>
+        Features:-<ul>
+            <li>Pinnacle of material design !
+            <li>Simple dashboard for easy navigation.
+            <li>A custom slideshow for showing the history of A.I
+            <li>Teaches the bare minimum basics of python (Installing instructions not included)
+            <li>Has usage of complex css constructors
+            <li>Smart usage of Javascript and jQuery for transition effects. 
+            
+            <li>Automatic Dark mode and light mode based on time at your place !!!!!
+            <li>The copyright year in the footer is automatic and changes with the year !
+        </ul>
+          
+       </div><!--Home Section-->
+       <div id="aboutSection" class="scene">
+           <h2>About</h2><hr>
+           This is a holiday homework from my school for the subject <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">Artificial Intelligence (A.I)</a>. I had many ideas for designing the webpage. It was difficult to find the right colour combination. But in the end I decided to go with material design.
+           <br>I'll try to make this as compatible with all devices but most probably all my efforts wont be enough. <br>
+           For changing to day mode or night mode manually change the 'xy' variable to less than 19 for day mode and more than 19 for night mode ! Otherwise this change happens automatically
+       </div><!--About Section-->
+       <div id="historySections" class='scene'>
+           <h2>History of A.I</h2><hr>
+           Watch the history of A.I with this automatic slideshow made with the help of Javascript and jQuery !
+           <br>
+           <center><button onclick="scaleEm();" id="startIT">Start slideshow ?</button></center><br>
+           <div id="slideshow"><center><h2><div id="someText"></div></h2><img id="slideImg"></center></div>
+       </div><!--History Section-->
+       <div id="domainSections" class='scene'>
+           <h2>Domains of A.I</h2><hr>
+           The following are the three main domains in A.I:-<br>
+           <br>
+           <h3>Data</h3>
+           Data are units of information, often numeric, that are collected through observation. In a more technical sense, data are a set of values of qualitative or quantitative variables about one or more persons or objects,[1] while a datum (singular of data) is a single value of a single variable.<br><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Data_types_-_en.svg/400px-Data_types_-_en.svg.png'><br><br>
+           <h3>Computer Vision</h3>
+           Computer vision is an interdisciplinary scientific field that deals with how computers can gain high-level understanding from digital images or videos. From the perspective of engineering, it seeks to understand and automate tasks that the human visual system can do.
+
+Computer vision tasks include methods for acquiring, processing, analyzing and understanding digital images, and extraction of high-dimensional data from the real world in order to produce numerical or symbolic information, e.g. in the forms of decisions. Understanding in this context means the transformation of visual images (the input of the retina) into descriptions of the world that make sense to thought processes and can elicit appropriate action. This image understanding can be seen as the disentangling of symbolic information from image data using models constructed with the aid of geometry, physics, statistics, and learning theory.<br><br><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/SRT_Shape_Recognition_Technology.png/500px-SRT_Shape_Recognition_Technology.png'><br><br>
+           <h3>Natural Language Processing (NLP)</h3>
+           Natural language processing (NLP) is a subfield of linguistics, computer science, and artificial intelligence concerned with the interactions between computers and human language, in particular how to program computers to process and analyze large amounts of natural language data. The result is a computer capable of "understanding" the contents of documents, including the contextual nuances of the language within them. The technology can then accurately extract information and insights contained in the documents as well as categorize and organize the documents themselves.<br><br><img src='https://upload.wikimedia.org/wikipedia/commons/8/8b/Automated_online_assistant.png'><br><br>
+       </div><!--Domain Section-->
+       <div id="advantageSections" class='scene'>
+           <h2>Advantages of A.I</h2><hr><ol>
+            <li>Reduction in Human Error: AI system would have low error rate compared to human ,if coded properly.
+Example: In Weather Forecasting using AI they have reduced the majority of human error.
+
+<li> Takes risks instead of Humans: We can overcome many risky limitations of humans by developing an AI Robot which in turn can do the risky things for us.
+Example: going to mars, defuse a bomb , explore the deepest parts of oceans, mining for coal and oil
+
+<li> Available 24x7:They don’t need to sleep,rest,take breaks or get entertained . So we can make machines work 24x7 without any breaks and they don’t even get bored or tired, unlike humans.
+Example: Educational Institutes and Helpline centers are getting many queries and issues which can be handled effectively using AI.
+<li>Helping in Repetitive Jobs: Using artificial intelligence we can productively automate these mundane tasks and can even remove “boring” tasks for humans and free them up to be increasingly creative.
+Example: Sending a thanking mail, verifying certain documents for errors
+ 
+<li> Can avoid Fraud : The AI system can detect fraud in card based systems and possibly other systems in the future
+ 
+<li> Faster Decisions: While taking a decision human will analyze many factors both emotionally and practically but AI-powered machine works on what it is programmed and delivers the results in a faster way.
+ 
+Example: We all have played Chess games in Windows. It is nearly impossible to beat CPU in the hard mode because of the AI behind that game. 
+
+</ol>
+       </div><!--Advantages Section-->
+       <div id="disadvantageSections" class='scene'>
+           <h2>Disadvantages of A.I</h2><hr>
+           <ol>
+               <li>High Costs of Creation:  As AI is updating every day the hardware and software need to get updated with time to meet the latest requirements. It’ s creation requires huge costs as they are very complex machines.
+
+<li>Making Humans Lazy: AI is making humans lazy with its applications automating the majority of the work. Humans tend to get addicted to these inventions which can cause a problem to future generations.
+
+<li>Unemployment: As AI is replacing the majority of the repetitive tasks and other works with robots,human interference is becoming less which will cause a major problem in the employment standards. <li>No Emotions: There is no doubt that machines are much better when it comes to working efficiently but they cannot replace the human connection that makes the team.
+
+<li>Lacking Out of Box Thinking: Machines can perform only those tasks which they are designed or programmed to do, anything out of that they tend to crash or give irrelevant outputs which could be a major backdrop.
+
+
+           </ol>
+       </div><!--Disadvantages Section-->
+       <div id="applicationSections" class='scene'>
+           <h2>Applications of A.I</h2><hr>
+           There are many applications of A.I. Some of the current applications are :- <ul>
+               <li>Alexa,Siri,Cortana and other chatbots
+               <li>Spam filters 
+               <li>Face recognition technologies in smartphones
+               <li>Self-Driving Cars (Experimental)
+           </ul>
+           <br>In the future though, the application of A.I may be huge. It may do our gardening work or any other repetitive tasks that we find boring [Doing hand gardening maybe fun for some of you so sorry ;)] 
+       </div><!--Application Section-->
+       <div id="pySections" class='scene'>
+           <h2>Basic Python</h2><hr>
+           Welcome to the learn python section of this webpage. Today we will be learning 5 basic concepts in Python.<br>
+           We will be writing the code in script mode and executing it. <br><br>
+           So the concepts are :- 
+           <ul>
+            <li><a>Variables</a></li> 
+            <li><a>Comments</a></li>  
+            <li><a>Print statements</a></li>  
+            <li><a>If else functions</a></li>   
+            <li><a>Functions</a></li>   
+           </ul>
+           <br>So let us get started !!
+           <br>
+           <h3><u>Variables</u></h3>
+           So this is one of the most important concepts in any programming language. 
+           <br>
+           There is a simple way to explain variables. Consider the variable as a box. You can put anything inside the box and take it out at any time. This is the simple definition of a variables. 
+           <br>In python you cant declare a variable with nothing in it ( which you can in other programming languages ).
+           To make a variable you have to write its name followed by an '=' sign followed by the value you asign it. <br>Look at the below example :-
+           <br><br>
+           <tt><div class='codeBox'>
+           <br>
+               &nbsp;&nbsp;<span class='pink'>variable</span><span class='blue'> = 'Hello Everyone'</span><span class='red'>&nbsp;&lt--Red colored text are comments.... The pink part is the variable and the blue part is normal text. The variable is named as variable in this case and holds a string in it !</span><br>
+               &nbsp;&nbsp;<span class='pink'>variable</span><span class='blue'> = 1</span><span class='red'>&nbsp;#This variable holds a number in it :)</span><br>
+               &nbsp;&nbsp;<span class='pink'>variable</span><span class='blue'> = [0,1,3,4]</span><span class='red'>&nbsp;#This variable holds an array in it (You will learn them in more advanced tutorials)</span><br>
+               &nbsp;&nbsp;<span class='pink'>variable</span><span class='blue'> = {"name":"You","Phone-Number":983202320}</span><span class='red'>&nbsp;#This variable holds an object in it (You will learn them in more advanced tutorials)</span>
+           </div></tt><!--Code box-->
+           Well that is it for variables. They are really just small storage spaces ;)<br><br>
+           <h3><u>Comments</u></h3>
+           Comments are just text in the code that are not used by the computer. It is just text for humans to read and understand the code etc.
+           <br>
+           <tt><div class='codeBox'>
+               &nbsp;&nbsp;<span class='red'>#single line comment. For signle line comments use a # </span><br><br>
+               &nbsp;&nbsp;<span class='green'>"""Double line comment.<br> For double line comments use a """ </span>
+           </div></tt><!--Codebox--><br><br>
+           <h3><u>Print statements</u></h3>
+           Print statements are used to write something onto the console when you run the script. They are very useful !<br>
+            <tt><div class='codeBox'>
+               &nbsp;&nbsp;<span class='blue'>print('Yay')</span><br><br>
+           </div></tt><!--Codebox--><br>
+           <b>Output: </b><br>
+            <tt><div class='WcodeBox'>
+               &nbsp;>Yay
+           </div></tt><!--White Result box-->
+           <br>Now we have crossed the half-way mark in this basic python course !!!<br><br>
+           <h3><u>If/Else statements</u></h3>
+           If/else statements are used to execute some code if a particular condition is fullfilled. <br>
+           Syntax: if condition :<br>
+                      //code
+                      
+            <br> 
+            <tt><div class='codeBox'>
+               &nbsp;&nbsp;<span class='blue'>if </span><span class='green'>1 >0 </span><span class='blue'>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('The condition is true')<br>
+               yo()<span class='red'>#calls the function</span>
+               </span><br><br>
+           </div></tt><!--Codebox--><br><br>
+            <h3><u>Functions</u></h3>
+            Many a times we find that we are using a block of code many times. To make our job easier we can use functions....<br>
+            <tt><div class='codeBox'>
+               &nbsp;&nbsp;<span class='blue'>def</span><span class='green'> yo</span><span class='blue'>():<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('The condition is true')
+               </span><br><br>
+           </div></tt><!--Codebox--><br><br><br><br><br><br>
+            <h2>Congratulations !!! You have completed this basic python course</h2>
+       </div><!--Python Section-->
+       <div id="creditsSections" class='scene'>
+           <h2>Credits</h2><hr>
+           Last but not the least... the Credits !!
+           <br>
+           I want to thank all these sources for the information in this webpage-<ul>
+               <li>Images from <a href='https://en.wikipedia.org/wiki/Main_Page'>Wikipedia</a></li>
+               <li>Information in the Domains sections from  <a href='https://en.wikipedia.org/wiki/Main_Page'>Wikipedia</a></li>
+               <li>My school for information in the Advantages and Disadvantages section !!</li>
+               
+               That is all !!<br>
+               Hope you enjoyed the webpage !!
+           </ul>
+       </div><!--Credits-->
+       <br><br><br>
+       <footer>
+           <center><a href="#">Jump to top ?
+           <div class="material-icons" onclick='window.scrollTo(0,0)'>      arrow_upward
+           </div></a></center>
+           Credits given in the credits section<br>
+           Contact @<a href='https://www.khanacademy.org/profile/abhijitbiswas07/projects'>Khan academy projects</a><br>
+           Copyright©<b id="year"></b>
+           <div style='position:relative;top:-73px;left:463px'>Address: Vostok Exploration Base,<br> Antartica<br> (Sorry no personal info)</div>
+           
+       </footer><br>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    <script>
+     $("#navbar").hide()
+      function openNavigator(){
+          
+          $("body").css('opacity',0.9)
+          $("body").css('background-color','rgba(0, 0, 0,0.7)')
+          $("footer").css('background-color','rgba(0, 0, 0,0)')
+          $("#navbar").show()
+         
+      }
+      function closeNavigator(){
+          if(xy<19){
+          $("body").css('opacity',1)
+          $("body").css('background-color','white')
+          $("footer").css('background-color','black')
+          $("#navSymbol").hide()
+          $("#navbar").hide()
+          $("#navSymbol").show()
+          }else{
+          $("body").css('opacity',1)
+          $("body").css('background-color','black')
+          $("footer").css('background-color','white')
+          $('footer').css('background-color','black')
+          $("#navSymbol").hide()
+          $("#navbar").hide()
+          $("#navSymbol").show()
+          }
+      }
+    </script><!--Open and close Navbar functions-->
+    <script>
+        var scenes = document.getElementsByClassName('scene');
+        function changePage(index) {
+            ;
+            for (var i = 0; i < scenes.length; i++) {
+                scenes[i].style.display = 'none';
+            }
+            scenes[index].style.display = 'block';
+            window.scrollTo(0,0)
+            closeNavigator()
+        };
+        changePage(0)
+    </script><!--Change Page Script-->
+    <script>
+        var options = {
+            strings: ["The future of humanity","Impressive", "Easy to learn", "Interesting"],
+            typeSpeed: 80,
+            backSpeed: 38,
+            loop: !0
+        };
+        new Typed('#movingText', options);
+    </script><!--The moving text.... Uses an external library-->
+    <script>
+        var x = new Date()
+        var yx = x.getFullYear()
+        var xy = x.getHours();
+        if(xy>19){
+            $('body').css('background-color','black')
+            $('footer').css('background-color','black')
+            $('body').css('color','white')
+            $('#navSymbol').css('left','0px')
+            $('#navbar').css('left','0px')
+        }
+        $("#year").text(yx)
+    </script><!--Calendar Functions-->
+    <script>
+    $("#ai").hide();
+    var isdropped = false
+    function dropIt(){
+        if(!isdropped){
+           $("#ai").slideDown(); 
+           $("#drop").css('transform','rotate(0deg)'); 
+           isdropped= true
+        }else if(isdropped){
+           $("#ai").slideUp(); 
+           $("#drop").css('transform','rotate(-90deg)'); 
+           isdropped= false
+        }
+    }
+    </script><!-- For the text inside the navbar-->
+    <script>
+        var imgArray = ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Neuron3.svg/800px-Neuron3.png','https://upload.wikimedia.org/wikipedia/commons/e/e4/Turing_Test_version_3.png','https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/John_McCarthy_Stanford.jpg/300px-John_McCarthy_Stanford.jpg','https://upload.wikimedia.org/wikipedia/commons/1/10/BRL61-IBM_702.jpg','https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/3d-printed-humanoid-robot-manav-mumbai-techfest-2015.jpg/500px-3d-printed-humanoid-robot-manav-mumbai-techfest-2015.jpg']
+        function scaleEm(){
+             $(window).scrollTop($('#slideshow').position().top);
+             var animation1 = window.setInterval(lookyhere)
+            
+             
+        }
+        var counter = 0;
+        $("#someText").hide()
+        function lookyhere(){
+            if(counter===0){
+                $("#someText").html('Welcome to this Slideshow<br>We will be seeing 5 historic Events in the History of A.I<br>So let us begin......')
+             $("#someText").fadeIn(5000)
+            }
+            if(counter===1000){
+               $("#someText").html('1943 :McCullough and Pitts’ invented “artificial neurons”.')
+             $("#slideshow").css('background-color','white')
+             $("#slideshow").css('color','black')
+             $('#slideImg').attr('src',imgArray[0])
+            }
+            if(counter===2000){
+               $("#someText").html('1950 : Inventions of Alan Turing’s “Computing machinery  and Intelligence”.')
+             $("#slideshow").css('background-color','black')
+             $("#slideshow").css('color','white')
+             $('#slideImg').attr('src',imgArray[1])
+            }
+            if(counter===3000){
+               $("#someText").html('1956 : Dartmouth conference; And the birth of AI.')
+             $('#slideImg').attr('src',imgArray[2])
+            }
+            if(counter===4100){
+               $("#someText").html('1974 to 1980 and 1987 to 1993: First and second A.I winter respectively')
+             $('#slideImg').attr('src',imgArray[3])
+            }
+            if(counter===5000){
+               $("#someText").html('Present: More focus on A.I !! YAY !')
+             $('#slideImg').attr('src',imgArray[4])
+            }
+            if(counter===5500){
+               $("#someText").html('Bye !!')
+               window.clearInterval(animation1)
+            }
+             counter++
+        }
+    </script><!--Slideshow script-->
+    </body>
+</html>
