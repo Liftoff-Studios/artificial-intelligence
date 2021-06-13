@@ -354,35 +354,7 @@ Example: We all have played Chess games in Windows. It is nearly impossible to b
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     
-    <script>
-     $("#navbar").hide()
-      function openNavigator(){
-          
-          $("body").css('opacity',0.9)
-          $("body").css('background-color','rgba(0, 0, 0,0.7)')
-          $("footer").css('background-color','rgba(0, 0, 0,0)')
-          $("#navbar").show()
-         
-      }
-      function closeNavigator(){
-          if(xy<19){
-          $("body").css('opacity',1)
-          $("body").css('background-color','white')
-          $("footer").css('background-color','black')
-          $("#navSymbol").hide()
-          $("#navbar").hide()
-          $("#navSymbol").show()
-          }else{
-          $("body").css('opacity',1)
-          $("body").css('background-color','black')
-          $("footer").css('background-color','white')
-          $('footer').css('background-color','black')
-          $("#navSymbol").hide()
-          $("#navbar").hide()
-          $("#navSymbol").show()
-          }
-      }
-    </script><!--Open and close Navbar functions-->
+    
     <script>
         var scenes = document.getElementsByClassName('scene');
         function changePage(index) {
@@ -418,6 +390,35 @@ Example: We all have played Chess games in Windows. It is nearly impossible to b
         }
         $("#year").text(yx)
     </script><!--Calendar Functions-->
+        <script>
+     $("#navbar").hide()
+      function openNavigator(){
+          
+          $("body").css('opacity',0.9)
+          $("body").css('background-color','rgba(0, 0, 0,0.7)')
+          $("footer").css('background-color','rgba(0, 0, 0,0)')
+          $("#navbar").show()
+         
+      }
+      function closeNavigator(){
+          if(xy<19){
+          $("body").css('opacity',1)
+          $("body").css('background-color','white')
+          $("footer").css('background-color','black')
+          $("#navSymbol").hide()
+          $("#navbar").hide()
+          $("#navSymbol").show()
+          }else{
+          $("body").css('opacity',1)
+          $("body").css('background-color','black')
+          $("footer").css('background-color','white')
+          $('footer').css('background-color','black')
+          $("#navSymbol").hide()
+          $("#navbar").hide()
+          $("#navSymbol").show()
+          }
+      }
+    </script><!--Open and close Navbar functions-->
     <script>
     $("#ai").hide();
     var isdropped = false
