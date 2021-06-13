@@ -356,19 +356,6 @@ Example: We all have played Chess games in Windows. It is nearly impossible to b
     
     
     <script>
-        var scenes = document.getElementsByClassName('scene');
-        function changePage(index) {
-            ;
-            for (var i = 0; i < scenes.length; i++) {
-                scenes[i].style.display = 'none';
-            }
-            scenes[index].style.display = 'block';
-            window.scrollTo(0,0)
-            closeNavigator()
-        };
-        changePage(0)
-    </script><!--Change Page Script-->
-    <script>
         var options = {
             strings: ["The future of humanity","Impressive", "Easy to learn", "Interesting"],
             typeSpeed: 80,
@@ -419,6 +406,19 @@ Example: We all have played Chess games in Windows. It is nearly impossible to b
           }
       }
     </script><!--Open and close Navbar functions-->
+    <script>
+        var scenes = document.getElementsByClassName('scene');
+        function changePage(index) {
+            ;
+            for (var i = 0; i < scenes.length; i++) {
+                scenes[i].style.display = 'none';
+            }
+            scenes[index].style.display = 'block';
+            window.scrollTo(0,0)
+            closeNavigator()
+        };
+        changePage(0)
+  </script><!--Change Page Script-->
     <script>
     $("#ai").hide();
     var isdropped = false
